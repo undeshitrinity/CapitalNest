@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wallet Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url(energy.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+      min-height: 100vh;
+      padding-bottom: 70px; /* space for bottom nav */
+    }
+
+    .profile-header {
+      width: 100%;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      padding: 20px;
+      border-radius: 0 0 20px 20px;
+      text-align: center;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .profile-info .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .wallet-card {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      margin-top: -30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .wallet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .details-btn {
+      border: 1px solid #3b82f6;
+      background: none;
+      color: #3b82f6;
+      border-radius: 8px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+
+    .wallet-stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      text-align: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stat h2 {
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    .wallet-actions {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .deposit-btn, .withdraw-btn {
+      flex: 1;
+      min-width: 120px;
+      padding: 10px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .deposit-btn {
+      background: #3b82f6;
+    }
+
+    .withdraw-btn {
+      background: #0284c7;
+    }
+
+    .menu-list {
+      width: 90%;
+      max-width: 500px;
+      margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .menu-list a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu-list a:hover {
+      background-color: #f9f9f9;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .bottom-nav a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-item {
+      text-align: center;
+      color: #666;
+    }
+
+    .nav-item.active {
+      color: #3b82f6;
+      font-weight: bold;
+    }
+
+    /* 📱 Responsive adjustments */
+    @media (max-width: 600px) {
+      .wallet-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .wallet-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .profile-info .avatar {
+        width: 60px;
+        height: 60px;
+      }
+
+      .wallet-card, .menu-list {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-header">
+    <div class="profile-info">
+      <img src="unk.webp" alt="Mascot" class="avatar">
+      <h3>ID: 6574839363</h3>
+    </div>
+  </div>
+
+  <div class="wallet-card">
+    <div class="wallet-header">
+      <h3>My Wallet</h3>
+      <button class="details-btn">Details</button>
+    </div>
+
+    <div class="wallet-stats">
+      <div class="stat">
+        <h2>₦0</h2>
+        <p>Balance</p>
+      </div>
+      <div class="stat">
+        <h2>₦0</h2>
+        <p>Today's Profit</p>
+      </div>
+      <div class="stat">
+        <h2>₦0</h2>
+        <p>Total Profit</p>
+      </div>
+    </div>
+
+    <div class="wallet-actions">
+      <button class="deposit-btn">Deposit</button>
+      <form action="withdraw.html">
+      <button class="withdraw-btn">Withdraw</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="menu-list">
+    <a href="exxxxt.html">Task List</a>
+    <a href="ex.html">Revenue Statistics</a>
+    <a href="#">Red Envelope Exchange</a>
+    <a href="#">Profile Settings</a>
+    <a href="index.html">log out</a>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="nav-item"><a href="yhyh.html">🏠 Home</a></div>
+    <div class="nav-item"><a href="ex.html">🎁invite</a></div>
+    <div class="nav-item active">👤 Profile</div>
+  </div>
+</body>
+</html>

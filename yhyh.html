@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapitalNest</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      background-image: url(ray.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-bottom: 60px; /* space for bottom nav */
+    }
+
+    .slider {
+      width: 90%;
+      max-width: 500px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .slides {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      transition: transform 7s ease;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .dot.active {
+      background: white;
+      transform: scale(1.8);
+    }
+
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 450px;
+      padding: 15px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 15px;
+      margin-right: 15px;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .desc {
+      color: gray;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .accept-btn {
+      background: #02376d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 18px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #024180;
+      color: white;
+      padding: 5px 12px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 8px;
+      font-size: 14px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fdfeff;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-item a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card img {
+        margin-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+      }
+
+      .card-content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+      <img src="blendBoard.jpg" alt="Slide 1" />
+      <img src="blendBoard (1).jpg" alt="Slide 2" />
+      <img src="therminal.webp" alt="Slide 3" />
+      <img src="geothermal.webp" alt="Slide 4" />
+      <img src="blendBoard (2).jpg" alt="Slide 5" />
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards-container">
+    <div class="card">
+      <div class="label">Hydropower</div>
+      <img src="hydropower.jpg" alt="Hydropower" />
+      <div class="card-content">
+        <div class="title">₦2,000</div>
+        <div class="desc">Need to invest 2,000. Can earn 500 daily.</div>
+        <button class="accept-btn">Accept</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Biomass</div>
+      <img src="bm.webp" alt="Biomass" />
+      <div class="card-content">
+        <div class="title">₦5,000</div>
+        <div class="desc">Need to invest 5,000. Can earn 1,500 daily.</div>
+        <button class="accept-btn">Accept</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Carbon Credit</div>
+      <img src="carbon credit p.webp" alt="Carbon Credit" />
+      <div class="card-content">
+        <div class="title">₦8,000</div>
+        <div class="desc">Need to invest 8,000. Can earn 2,300 daily.</div>
+        <button class="accept-btn">Accept</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Therminal</div>
+      <img src="therminal.webp" alt="Therminal" />
+      <div class="card-content">
+        <div class="title">₦15,000</div>
+        <div class="desc">Need to invest 15,000. Can earn 4,500 daily.</div>
+        <button class="accept-btn">Accept</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Geothermal</div>
+      <img src="geothermal.webp" alt="Geothermal" />
+      <div class="card-content">
+        <div class="title">₦20,000</div>
+        <div class="desc">Need to invest 20,000. Can earn 6,000 daily.</div>
+        <button class="accept-btn">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <div class="nav-item">🏠 Home</div>
+    <div class="nav-item"><a href="ex.html">🎁invite</a></div>
+    <div class="nav-item"><a href="rgrg.html">👤 Profile</a></div>
+  </div>
+
+  <!-- <script>
+    let index = 0;
+      </script> -->
+
+<script>
+  let index = 0;
+  let direction = 1; // 1 means forward, -1 means backward
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const dots = document.querySelectorAll('.dot');
+  const total = images.length;
+
+  function showSlide(i) {
+    slides.style.transform = `translateX(-${i * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[i % dots.length].classList.add('active');
+  }
+
+  function nextSlide() {
+    index += direction;
+
+    if (index >= total - 1 || index <= 0) {
+      direction *= -1;
+    }
+
+    showSlide(index);
+  }
+
+  // Auto-slide every 3 seconds
+  setInterval(nextSlide, 3000);
+
+  // Optional: click dots to jump directly
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+
+  // Initial setup
+  showSlide(index);
+</script>

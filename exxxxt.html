@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Page</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3f7ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 360px;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 20px;
+    }
+    .banner img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #e2e2e2;
+    }
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      background: #f5f8ff;
+      font-weight: 500;
+    }
+    .tab.active {
+      background: #4a8bff;
+      color: white;
+      border-radius: 8px 8px 0 0;
+    }
+    .content {
+      padding: 16px;
+    }
+
+    .section {
+      background: #f9fbff;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #e0e6ff;
+    }
+    .section h3 {
+      font-size: 15px;
+      color: #333;
+      margin: 0 0 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .date-range {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #555;
+      background: #fff;
+      border: 1px solid #d0d9ff;
+      border-radius: 6px;
+      padding: 4px 8px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      border: 1px solid #4a8bff;
+      background: white;
+      color: #4a8bff;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active {
+      background: #4a8bff;
+      color: white;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      text-align: center;
+      margin-top: 16px;
+      border-top: 1px solid #e0e0e0;
+      padding-top: 12px;
+    }
+
+    .stat {
+      font-size: 13px;
+      color: #333;
+    }
+    .stat-value {
+      font-weight: 600;
+      color: #000;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+
+    .divider {
+      grid-column: span 2;
+      border-top: 1px dashed #ccc;
+      margin: 10px 0;
+    }
+
+    .footer-stat {
+      text-align: center;
+      color: #000;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .footer-label {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .detailed-section {
+      background: #f9fbff;
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #e0e6ff;
+    }
+
+    .detailed-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .detailed-buttons .filter-btn {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+      <img src="elen.jpg" alt="Banner">
+    </div>
+
+    <div class="tabs">
+      
+      <div class="tab"><a href="ex.html">Invite</a> </div>
+      <div class="tab active">Data</div>
+    </div>
+
+    <div class="content">
+      <!-- Statistics Section -->
+      <div class="section">
+        <h3>
+          Statistics
+          <div class="date-range">
+            <span><data value="device-width"></data></span>
+          </div>
+        </h3>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Level 1</button>
+          <button class="filter-btn">Level 2</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            Enrollment
+            <div class="stat-value">0</div>
+          </div>
+          <div class="stat">
+            Number of Recharges
+            <div class="stat-value">0</div>
+          </div>
+          <div class="stat">
+            Task Commission
+            <div class="stat-value">₦0.00</div>
+          </div>
+          <div class="divider"></div>
+          <div class="footer-stat">
+            ₦0.00
+            <div class="footer-label">Reward Received</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Data Section -->
+      <div class="detailed-section">
+        <h3>
+          Detailed Data
+          <div class="date-range">
+            <span>2025/09/15 - 2025/10/15</span>
+          </div>
+        </h3>
+        <div class="detailed-buttons">
+          <button class="filter-btn active">Level 1</button>
+          <button class="filter-btn">Level 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple toggle for filter buttons
+    document.querySelectorAll('.filter-tabs .filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tabs .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+    document.querySelectorAll('.detailed-buttons .filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.detailed-buttons .filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

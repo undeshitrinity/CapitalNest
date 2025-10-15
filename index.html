@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('energy copy.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(92, 190, 247);
+    }
+
+    .formiv {
+      background-image: url('pump.webp');
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(219, 219, 7, 0.85);
+      padding: 30px 20px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .formiv h2 {
+      margin-bottom: 20px;
+    }
+
+    .formiv h5 {
+      text-align: left;
+      margin: 10px 0 5px 10px;
+      font-size: 14px;
+    }
+
+    .formiv input {
+      width: 90%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .formiv button.formi {
+      width: 90%;
+      padding: 10px;
+      background-color: rgb(76, 188, 240);
+      color: rgb(245, 248, 248);
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .formiv button.formi:hover {
+      background-color: rgb(60, 160, 210);
+    }
+
+    .formiv .register {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .formiv .register a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    @media (max-width: 400px) {
+      .formiv {
+        padding: 20px 15px;
+      }
+
+      .formiv input, .formiv button.formi {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="formiv">
+    <h2>LOGIN</h2>
+    <form action="yhyh.html" method="post">
+      <h5>Username</h5>
+      <input type="text" placeholder="Enter username" name="username" required />
+
+      <h5>Password</h5>
+      <input type="password" placeholder="Enter password" id="password" name="password" required />
+
+      <button type="submit" class="formi">Login</button>
+    </form>
+
+    <div class="register">
+      Don't have an account?
+      <a href="creat.html">Create Account</a>
+    </div>
+  </div>
+</body>
+</html>
