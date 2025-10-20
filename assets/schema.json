@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Your Energy Investment Platform",
+  "url": "https://yourwebsite.com",
+  "logo": "https://yourwebsite.com/assets/logo.png",
+  "description": "Invest in clean and renewable energy projects to earn sustainable returns and support global green innovation.",
+  "foundingDate": "2024",
+  "founder": "Your Name or Company",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+234-800-000-0000",
+    "contactType": "customer support",
+    "areaServed": "NG"
+  },
+  "sameAs": [
+    "https://www.facebook.com/yourpage",
+    "https://www.linkedin.com/company/yourcompany",
+    "https://twitter.com/yourhandle"
+  ]
+}
