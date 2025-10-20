@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deposit Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f9f9fb;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    .account-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      max-width: 420px;
+      width: 100%;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+
+    .account-card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .subtext {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .card-row {
+      background: #f4f6f8;
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label {
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 3px;
+    }
+
+    .value {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .copy-btn {
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+
+    .copy-btn:hover {
+      background: #3f9443;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Account Option 1 -->
+  <div class="account-card">
+    <h2>Recharge Point</h2>
+    <p class="subtext">Automated Bank Transfer 👇👇👇</p>
+    <p class="description">
+      MAKE A TRANSFER TO THIS UNIQUE ACCOUNT NUMBER GIVEN TO YOU AND YOUR ACCOUNT WILL BE CREDITED IMMEDIATELY.
+    </p>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Account Number</span>
+        <span class="value" id="acc1">5262553039</span>
+      </div>
+      <button class="copy-btn" onclick="copyAcc('acc1')">Copy</button>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Bank Name</span>
+        <span class="value">9Payment Service Bank</span>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Account Name</span>
+        <span class="value">Yangapoint Recharge</span>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Charges</span>
+        <span class="value">1.2% capped at 50 Naira</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Option 2 -->
+  <div class="account-card">
+    <h2>PALMPAY AUTOMATED BANK TRANSFER</h2>
+    <p class="subtext">Automated Bank Transfer 👇👇👇</p>
+    <p class="description">
+      MAKE A TRANSFER TO THIS UNIQUE ACCOUNT NUMBER GIVEN TO YOU AND YOUR ACCOUNT WILL BE CREDITED IMMEDIATELY.
+    </p>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Account Number</span>
+        <span class="value" id="acc2">6615965420</span>
+      </div>
+      <button class="copy-btn" onclick="copyAcc('acc2')">Copy</button>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Bank Name</span>
+        <span class="value">PALMPAY</span>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Account Name</span>
+        <span class="value">PAYVESSEL/BILLSPLUG </span>
+      </div>
+    </div>
+
+    <div class="card-row">
+      <div class="card-content">
+        <span class="label">Charges</span>
+        <span class="value">1.2% capped at 50 Naira</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer">© 2025 Yangapoint</p>
+
+  <script>
+    function copyAcc(id) {
+      const acc = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(acc);
+      alert("Account number copied: " + acc);
+    }
+  </script>
+</body>
+</html>
