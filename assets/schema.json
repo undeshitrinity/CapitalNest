@@ -6,10 +6,21 @@
   "logo": "https://yourwebsite.com/assets/logo.png",
   "description": "Invest in clean and renewable energy projects to earn sustainable returns and support global green innovation.",
   "foundingDate": "2024",
-  "founder": "Your Name or Company",
+  "founder": {
+    "@type": "group",
+    "name": "CapitalNest"
+  },
+  "address": {
+    "@type": "100034",
+    "streetAddress": "123 Green Energy Avenue",
+    "addressLocality": "Lagos",
+    "addressRegion": "LA",
+    "postalCode": "100034",
+    "addressCountry": "NG"
+  },
   "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+234-800-000-0000",
+    "@type": "whatsApp",
+    "telephone": "+234-903-8431-202",
     "contactType": "customer support",
     "areaServed": "NG"
   },
