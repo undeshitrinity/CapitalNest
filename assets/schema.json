@@ -5,24 +5,21 @@
   "url": "https://yourwebsite.com",
   "logo": "https://yourwebsite.com/assets/logo.png",
   "description": "Invest in clean and renewable energy projects to earn sustainable returns and support global green innovation.",
-  "foundingDate": "2024",
-  "founder": {
-    "@type": "group",
-    "name": "CapitalNest"
+  "foundingDate": "2023",
+  "founder": "Eng Olajide",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+234-903-843-1202",
+    "contactType": "Customer Support",
+    "areaServed": "NG"
   },
   "address": {
-    "@type": "100034",
-    "streetAddress": "123 Green Energy Avenue",
+    "@type": "PostalAddress",
+    "streetAddress": "15 Energy Avenue, Lekki Phase 1",
     "addressLocality": "Lagos",
     "addressRegion": "LA",
-    "postalCode": "100034",
+    "postalCode": "101241",
     "addressCountry": "NG"
-  },
-  "contactPoint": {
-    "@type": "whatsApp",
-    "telephone": "+234-903-8431-202",
-    "contactType": "customer support",
-    "areaServed": "NG"
   },
   "sameAs": [
     "https://www.facebook.com/yourpage",
